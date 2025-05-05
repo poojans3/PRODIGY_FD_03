@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grocery Store</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4+2e5c7e5a5e5a5e5a5e5a5e5a5e5a5" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header nav {
+            margin-top: 15px;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        header nav a:hover {
+            color: #ff5722;
+        }
+
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .product-item {
+            width: 30%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-item h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .product-item .price {
+            font-size: 1.2rem;
+            color: #ff5722;
+        }
+
+        .product-item .add-to-cart {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-item .add-to-cart:hover {
+            background-color: #e64a19;
+        }
+
+
+        footer {
+            background-color: #2c3e50;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #ff5722;
+        }
+
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Grocery Store</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#features">Features</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#order-tracking">Order Tracking</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <h2 style="text-align: center; padding: 20px;">Our Featured Products</h2>
+
+            <div class="product-list">
+
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/200" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p class="price">$10.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/200" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p class="price">$15.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/200" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p class="price">$20.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" style="padding: 20px;">
+            <h2 style="text-align: center;">Our Features</h2>
+            <ul>
+                <li>Wide range of grocery products</li>
+                <li>Fast and reliable delivery</li>
+                <li>Easy return and refund policies</li>
+                <li>24/7 customer support</li>
+            </ul>
+        </section>
+
+        <section id="reviews" style="padding: 20px;">
+            <h2 style="text-align: center;">Customer Reviews</h2>
+            <div style="text-align: center;">
+                <p><strong>John Doe:</strong> Great products, fast delivery! Highly recommend.</p>
+                <p><strong>Jane Smith:</strong> Amazing customer service and variety of products!</p>
+            </div>
+        </section>
+
+        <section id="order-tracking" style="padding: 20px;">
+            <h2 style="text-align: center;">Track Your Order</h2>
+            <form style="text-align: center;">
+                <input type="text" placeholder="Enter your order ID" style="padding: 10px; width: 250px;">
+                <button type="submit"
+                    style="padding: 10px 20px; margin-left: 10px; background-color: #ff5722; color: white; border: none;">Track</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Grocery Store</p>
+        <p>
+            <a href="#home">Home</a> | <a href="#products">Products</a> | <a href="#features">Features</a> |
+            <a href="#reviews">Reviews</a> | <a href="#order-tracking">Order Tracking</a>
+        </p>
+    </footer>
+
+    <script>
+
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Product added to cart!');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
